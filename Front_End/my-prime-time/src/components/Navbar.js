@@ -33,7 +33,7 @@ const Navbar = ({ logout, isAuthenticated }) => {
         <div>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div id="nav_logo">
-                <img width="100px" height="100px" src="./mY pRIME tIME.jpg" alt=""/>
+                <img width="100px" height="100px" src="https://imgur.com/ktB5k6D" alt=""/>
             </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
