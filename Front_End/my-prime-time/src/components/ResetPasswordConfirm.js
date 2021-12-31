@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { reset_password_confirm } from '../actions/auth';
+import { Wrapper } from "./Header/Header.styles";
 
 const ResetPasswordConfirm = ({ match, reset_password_confirm }) => {
     const [requestSent, setRequestSent] = useState(false);
@@ -32,6 +33,7 @@ const ResetPasswordConfirm = ({ match, reset_password_confirm }) => {
    
     
     return (
+        <Wrapper>
         <div className='container mt-5'>
             <form onSubmit={e => onSubmit(e)}>
             <div className="form-group">
@@ -63,6 +65,7 @@ const ResetPasswordConfirm = ({ match, reset_password_confirm }) => {
             </form>
             
         </div>
+        </Wrapper>
     );
 
 };

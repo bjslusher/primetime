@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { login } from '../actions/auth';
+import { Wrapper } from "./Header/Header.styles";
 
 const Login = ({ login, isAuthenticated }) => {
     const [formData, setFormData] = useState({
@@ -21,12 +22,13 @@ const Login = ({ login, isAuthenticated }) => {
     };
 
     if (isAuthenticated) {
-        return <Redirect to='/' />
+        return <Redirect to='/home' />
     }
 
    
     
     return (
+        <Wrapper>
         <div className='container mt-5'>
             <h1>Sign In</h1>
             <p>Sign In To View Content</p>
@@ -63,6 +65,7 @@ const Login = ({ login, isAuthenticated }) => {
                 Forgot Password? <Link to='/reset-password'>Reset Password</Link>
             </p>
         </div>
+        </Wrapper>
     );
 
 };

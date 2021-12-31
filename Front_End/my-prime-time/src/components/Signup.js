@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { signup } from '../actions/auth';
+import { Wrapper } from "./Header/Header.styles";
 
 const  Signup= ({ signup, isAuthenticated }) => {
     const [accountCreated, setAccoutCreated] = useState(false);
@@ -34,6 +35,7 @@ const  Signup= ({ signup, isAuthenticated }) => {
    
     
     return (
+        <Wrapper>
         <div className='container mt-5'>
             <h1>Sign Up</h1>
             <p>Create Your Account Here</p>
@@ -91,6 +93,7 @@ const  Signup= ({ signup, isAuthenticated }) => {
             </p>
             
         </div>
+        </Wrapper>
     );
 
 };

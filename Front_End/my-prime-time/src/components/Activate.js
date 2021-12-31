@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { verify } from '../actions/auth';
+import { Wrapper } from "./Header/Header.styles";
 
 const Activate = ({ verify, match }) => {
     const [verified, setVerified] = useState(false);
@@ -22,6 +23,7 @@ const Activate = ({ verify, match }) => {
    
     
     return (
+        <Wrapper>
         <div className='container'>
             <div className="d-flex flex-column justify-content-center align-items-center"
             style={{ marginTop: '200px' }}
@@ -35,6 +37,7 @@ const Activate = ({ verify, match }) => {
                 </button>
             </div> 
         </div>
+        </Wrapper>
     );
 
 };

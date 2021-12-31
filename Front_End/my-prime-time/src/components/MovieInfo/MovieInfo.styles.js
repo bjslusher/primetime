@@ -55,12 +55,12 @@ export const Text = styled.div`
     background: #fff;
     color: #000;
     font-weight: 800;
-    border-radius: 25px;
+    border-radius: 50%;
     margin: 0px 0 0 0;
   }
 
   .director {
-    margin: 0 0 0 40px;
+    margin: 0 0 0 0px;
 
     p {
       margin: 0;
