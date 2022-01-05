@@ -85,7 +85,7 @@ WSGI_APPLICATION = 'my_prime_time.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'my_prime_time',
+        'NAME': 'primetime',
         'USER': 'Brian',
         'PASSWORD': '0317',
         'HOST': 'localhost'

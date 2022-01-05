@@ -14,21 +14,32 @@ import store from "./store";
 import Header from './components/Header';
 import Movie from './components/Movie';
 import NotFound from './components/NotFound';
+import {Watchlist} from './components/Watchlist';
+import Add from "./components/Add";
+import Watched from "./components/Watched";
+import { GlobalProvider } from './context/GlobalState';
+import './lib/font-awesome/css/all.min.css';
+import "./App.css";
+
+
 
 
 
 const App = () => (
     <Provider store={store}>
-        
+        <GlobalProvider>
         <GlobalStyle />
         <Router>
             <Header />
             <Layout>
                 <Switch>
-                    <Route exact path='/' component={Login} />
-                    <Route exact path='/:movieId' component={Movie} />
-                    <Route exact path='/*' component={NotFound} />
-                    <Route exact path='/home' component={Home} />
+                    <Route exact path='/' component={Home} />
+                    <Route exact path='/movie/:movieId' component={Movie} />
+                    {/* <Route exact path='/*' component={NotFound} /> */}
+                    <Route exact path='/watchlist' component={Watchlist} />
+                    <Route exact path='/watchlist/add' component={Add} />
+                    <Route exact path='/watchlist/watched' component={Watched} />
+                    <Route exact path='/login' component={Login} />
                     <Route exact path='/signup' component={Signup} />
                     <Route exact path='/reset-password' component={ResetPassword} />
                     <Route exact path='/password/reset/confirm/:uid/:token' component={ResetPasswordConfirm} />
@@ -36,6 +47,7 @@ const App = () => (
                 </Switch>
             </Layout>   
         </Router>
+        </GlobalProvider>
     </Provider>
 );
 

@@ -10,6 +10,11 @@ const BreadCrumb = ({ movieTitle }) => (
             </Link>
             <span>|</span>
             <span>{movieTitle}</span>
+            <span>|</span>
+            <Link to='/'>
+                <span>Add to Watchlist</span>
+            </Link>
+
         </Content>
     </Wrapper>
 );

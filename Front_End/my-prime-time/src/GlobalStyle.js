@@ -2,11 +2,12 @@ import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
     :root{
-        --maxWidth: 1920px;
+        --maxWidth: 1500px;
         --white: #fff;
         --lightGrey: #eee;
         --medGrey: #353535;
         --darkGrey: #1c1c1c;
+        --red: #ff0000;
         --fontSuperBig: 2.5rem;
         --fontBig: 1.5rem;
         --fontMed: 1.2rem;
@@ -32,6 +33,7 @@ export const GlobalStyle = createGlobalStyle`
             color: var(--white);
         }
         p {
+            
             font-size: 1rem;
             color: var(--white);
         }

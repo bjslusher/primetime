@@ -1,10 +1,15 @@
 import React from 'react';
+
 import Thumb from '../Thumb'
+
 import { IMAGE_BASE_URL, POSTER_SIZE } from '../../config';
 import NoImage from '../../images/no_image.jpg';
 import { Wrapper, Content, Text } from './MovieInfo.styles';
 
-const MovieInfo = ({ movie }) => (
+const MovieInfo = ({ movie }) => {
+    
+    
+    return (
     <Wrapper backdrop={movie.backdrop_path}>
         <Content>
             <Thumb
@@ -17,6 +22,7 @@ const MovieInfo = ({ movie }) => (
                 />
                 <Text>
                     <h1>{movie.title}</h1>
+                    <h2>Released: {movie.release_date ? movie.release_date : '-'}</h2>
                     <h3>DESCRIPTION</h3>
                     <p>{movie.overview}</p>
 
@@ -26,11 +32,17 @@ const MovieInfo = ({ movie }) => (
                             <div className='score'>
                                 {movie.vote_average}
                             </div>
+                            <hr />
                             <div className='director'>
                                 <h3>DIRECTOR{movie.directors.length > 1 ? 'S' : ""}</h3>
                                 {movie.directors.map(director => (
                                     <p key={director.credit_id}>{director.name}</p>
                                 ))}
+                            </div>
+                            <hr />
+                            <div>
+                                
+                                
                             </div>
                         </div>
                     </div>
@@ -38,4 +50,5 @@ const MovieInfo = ({ movie }) => (
         </Content>
     </Wrapper>
 );
+};
 export default MovieInfo;
