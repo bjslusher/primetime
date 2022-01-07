@@ -15,20 +15,35 @@ import {
     SIGNUP_FAIL,
     SIGNUP_SUCCESS,
     ACTIVATION_FAIL,
-    ACTIVATION_SUCCESS
+    ACTIVATION_SUCCESS,
+    REGISTER_SUCCESS,
+    REGISTER_FAIL
 } from '../actions/types';
 
 const initialState = {
-    access: localStorage.getItem('access'),
-    refresh: localStorage.getItem('refresh'),
     isAuthenticated : null,
-    user: null,
+    username: '',
+    first_name: '',
+    last_name: '',
+    Phone: '',
+    city: '',
+    zipcode: '',
+
 };
 
 export default function(state= initialState, action) {
     const { type, payload } = action;
 
     switch(type) {
+        case REGISTER_SUCCESS:
+            return {
+                ...state,
+                isAuthenticated: false
+            } 
+        case REGISTER_FAIL:
+            return {
+                ...state
+            } 
         case AUTHENTICATED_SUCCESS:
             return{
                 ...state,

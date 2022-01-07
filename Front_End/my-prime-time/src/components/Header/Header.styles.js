@@ -37,3 +37,12 @@ export const IMDbLogoImg = styled.img`
     width: 80px;
   }
 `;
+
+export const primetimeLogoVid = styled.video`
+  width: 500px;
+
+  @media screen and (max-width: 800px) {
+    width: 250px;
+  }
+`;
+
